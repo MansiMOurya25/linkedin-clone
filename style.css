@@ -1,0 +1,601 @@
+    /* to use font family */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins, sans-serif'
+  }
+  body{
+    background-color: rgb(235, 235 ,235);
+  } 
+  /* nav-bar css start from here  */
+  /* here we used flex proprty to set navbar */
+  nav .wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.3rem 4rem;
+    background: #fff;
+  }
+  /* gave flex property separately to both left and right navbar */
+  nav .wrapper .left ,
+  nav .wrapper  .right{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav .wrapper .left{
+    padding-left: 3rem;
+    display: flex;
+gap: 0.5rem; 
+}
+/* its icon related css */
+  nav  .wrapper .logo i{
+    font-size: 2.5rem;
+    color:#0a66c2;
+    cursor:pointer;
+  }
+  nav .wrapper .left .input{
+    background: white;
+    width:100%;
+    padding:0.5rem 0.8rem;
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    border-radius: 0.5rem;
+  }
+  /* here we used css for search input   */
+nav .wrapper .left .input input[type='search']{
+    width : 15rem;
+    border:none;
+    background: transparent;
+}
+
+nav .wrapper .left .input input[type='search']::placeholder{
+    font-size: 0.7rem;
+    color:rgb (49, 49, 49);
+    font-weight: 100;
+}
+nav .wrapper .left .input i{
+    font-size: 0.8rem;
+    color:grey;
+}
+/* here we used flex property for right side navbar */
+nav .wrapper .right .home,
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .me,
+nav .wrapper .right .work,
+nav .wrapper .right .atag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+} 
+/* here we used hover to change font color */
+nav .wrapper .right .home,
+nav .wrapper .right .network:hover ,
+nav .wrapper .right .jobs:hover,
+nav .wrapper .right .message:hover,
+nav .wrapper .right .notification:hover,
+nav .wrapper .right .me .down:hover,
+nav .wrapper .right .work .down:hover{
+    color:black;
+
+}
+nav .wrapper .right .network,
+nav .wrapper .right .jobs,
+nav .wrapper .right .message,
+nav .wrapper .right .notification,
+nav .wrapper .right .me ,
+nav .wrapper .right .work{
+    color: gray
+}
+/* added css for icon */
+nav .wrapper .right .home i,
+nav .wrapper .right .network i,
+nav .wrapper .right .jobs i,
+nav .wrapper .right .message i,
+nav .wrapper .right .user i,
+nav .wrapper .right .notification i{
+    font-size: 1.2rem;
+}
+nav .wrapper .right .me .down,
+nav .wrapper .right .work .down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: gray;
+ }
+ 
+
+nav .wrapper .right .me .down i:first-child{
+   background-color: gray;
+    color:#fff;
+ width: 1.5rem;
+ height: 1.5rem;
+ border-radius: 50%;
+ font-size: 0.9rem;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ } 
+ /* here we used some css like to remove under form anchor tag, text align ,width */
+.wrapper a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  width: 7rem;
+  text-align: center;
+  cursor:pointer;
+  color:gray;
+
+}
+.wrapper a:hover{
+  text-decoration: underline;
+}
+/* navbar css ended ................................*/
+/* main-part's css starts form here ................................................. */
+/* to divide in three part to main container . we used grid property  */
+.container{
+  display:grid;
+  grid-template-columns: 20% 52% 28%;
+  gap:1.4rem;
+  width:85%;
+  margin:1rem auto;
+}
+
+aside .sidebar{
+ background:#fff;
+ width:100%;
+ height:50vh;
+ position: relative;
+ border-radius: 0.8rem;
+ overflow: hidden;
+}
+
+.sidebar .top{  
+  width:100%;
+  height:8vh;
+  background-color:rgb(82, 92,105);
+  position:absolute
+}
+.sidebar img{
+  position:relative;
+  left:50%;
+  transform:translate(-50%);
+  top:3%;
+  border-radius: 50%;
+  width:5rem;
+  height: 5rem;
+
+}
+/* profile related css here */
+aside .sidebar  .profile{
+  position: relative;
+  text-align: center;
+  top:5%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.sidebar .profile h5:hover{
+  text-decoration: underline;
+}
+
+.sidebar .profile a{
+  text-decoration: none;
+  color: black;
+}
+ .sidebar  .profile small{
+  font-size: 0.6rem;
+  color:gray;
+ }
+ .sidebar .view {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  top: 6%;
+ }
+.sidebar .view .views{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2rem 0;
+  padding: 0.2 0.5rem;
+  cursor: pointer;
+  font-weight: 100;
+}
+.sidebar .view .views:hover{
+  background-color: gainsboro;
+}
+.sidebar .view .views h6{
+  color:gray;
+}
+.sidebar .view .views a{
+  color: blue;
+  text-decoration: none;
+  font-size: 0.8rem;
+} 
+/* to add positon in premium in sidebar */
+.sidebar .premium{
+  position: relative;
+  top: 7%;
+}
+.sidebar .premium h6{
+  color: gray;
+  font-weight: 100;
+  margin-left: 0.2rem;
+}
+.sidebar .premium a{
+  display: flex;
+  gap:0.5rem;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.8rem;
+  color:black;
+}
+.sidebar .premium a i{
+  color: rgb(211 ,211 ,33);
+}
+
+ hr.hr-line{
+  margin: 0.7rem 0.3rem;
+ } 
+ .items {
+  position: relative ;
+  top:8%;
+  display: flex;
+  gap:0.5rem;
+  margin-left: 1rem ;
+  color:gray;
+}
+/* recent jobs section  starts here */
+aside .recent_jobs{
+  background:#fff;
+  margin-top: 0.5rem;
+  width:100%;
+  height:80vh;
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+ } 
+ /* to set margin all part of sidebar */
+ aside .recent_jobs .recent,
+ aside .recent_jobs .groups,
+ aside .recent_jobs .followed-hastag{
+  margin:1rem;
+ }
+
+ aside .recent_jobs .recent h6,
+ aside .recent_jobs .groups h6,
+ aside .recent_jobs .followed-hastag h6{
+  font-weight: 100;
+ }
+ aside .recent_jobs .recent .one,
+ aside .recent_jobs .groups .two,
+ aside .recent_jobs .followed-hastag .three{
+  display: flex;
+  align-items: center;
+  margin-top: 0.7rem;
+  gap:0.5rem;
+  color:rgb(97, 97, 97)
+ }
+ aside .recent_jobs .recent .one i{
+  font-size: 0.8rem;
+ }
+ /* main section'css  starts from here........... */
+main .additional{
+  background: #fff;
+  border-radius: 0.4rem;
+  height:18vh;
+  position: relative;
+}
+/* search box related css here  */
+.box{
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem; 
+  gap:0.6rem;
+}
+main .additional .box input{
+  width: 85%;
+  border-radius: 1rem;
+  color:aliceblue
+  
+} 
+/* all icon photo ,video, event and write article is in container . used flex property to set  */
+.container2{
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  justify-content: space-evenly; 
+  gap:0.6rem;
+} 
+/* addded css to change some effect like cursor and background when we will hover over there */
+main .container2 .photo ,
+main .container2 .video ,
+main .container2 .event ,
+main .container2 .write-artical{
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+main .container2 .photo:hover ,
+main .container2 .video:hover ,
+main .container2 .event:hover ,
+main .container2 .write-artical:hover{
+  background: rgb(236, 231, 231);
+}
+/* second box means myntra post related css here............ */
+main .second-box{
+  background: #fff;
+  border-radius: 0.4rem;
+  height:65vh;
+  margin-top:1rem;
+  position: relative;
+}
+main .second-box .mini{
+  float: left;
+}
+main .second-box p{
+  font-size: 0.8rem;
+  color: rgb(62, 60, 60);
+}
+main .second-box .myntra-post{
+  padding-left:0.8rem; 
+}
+main .second-box .activity{
+  display: flex;
+  flex-direction: row;
+  gap:1.4rem;
+  font-size: 1rem;
+}
+main .second-box .activity i{
+  font-size: 1rem;
+  color: rgb(61, 60, 60);
+}
+
+/* added css to add efffect like when we will hover this thing's background change . */
+main .second-box .activity .like:hover,
+  main .second-box .activity .comment:hover,
+  main .second-box .activity .share:hover,
+  main .secon-box .activity .send:hover{
+  cursor: pointer;
+  transform: 0.2 all ease;
+}
+main .second-box .activity .like:hover,
+  main .second-box .activity .comment:hover,
+  main .second-box .activity .share:hover,
+  main .second-box .activity .send:hover{
+  background-color: rgb(214, 200, 200);
+}
+
+
+/* third-box means testbook post related css here............ */
+main .third-box{
+  background: #fff;
+  border-radius: 0.4rem;
+  height:65vh;
+  margin-top:1rem;
+}
+main .third-box .mini{
+  float: left;
+}
+main .third-box .break{
+  clear: left;
+}
+main .third-box p{
+  font-size: 0.8rem;
+  color: rgb(62, 60, 60);
+}
+main .third-box .test-post{
+  padding-left:0.8rem; 
+}
+main .third-box .activity{
+  display: flex;
+  flex-direction: row;
+  gap:1.4rem;
+  font-size: 1rem;
+}
+main .third-box .activity i{
+  font-size: 1rem;
+  color: rgb(61, 60, 60);}
+
+  main .third-box .activity .like:hover,
+  main .third-box .activity .comment:hover,
+  main .third-box .activity .share:hover,
+  main .third-box .activity .send:hover{
+  cursor: pointer;
+  transform: 0.2 all ease;
+}
+/* added effect to hover on that things */
+main .third-box .activity .like:hover,
+  main .third-box .activity .comment:hover,
+  main .third-box .activity .share:hover,
+  main .third-box .activity .send:hover{
+  background-color: rgb(214, 200, 200);
+}
+
+
+
+/* ..........right section'css starts from here................... */ 
+/* lastest news related css property  */
+.right_side_news {
+  background: #fff;
+  border-radius: 0.8rem;
+  height:47vh;
+}
+.right_side_news .news{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+/* to add some effect like transition ............. */
+.right_side_news .news-list{
+  padding: 0 2rem 0.2rem 1.7rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+/* to change backgronund to hover */
+.right_side_news .news-list li:hover{
+  background: rgb(236, 231, 231);
+}
+.right_side_news .news-list p{
+  font-size: 0.8rem;
+  color: rgb(113, 112, 112);
+  margin-bottom: 0.6rem;
+}
+/* news section ended */
+/* course'css starts from here...................... */
+.right_side_course {
+  background: #fff;
+  border-radius: 0.8rem;
+  height:33vh;
+}
+.right_side_course .course{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+.right_side_course .course-list p{
+  font-size: 0.8rem;
+  color: rgb(113, 112, 112);
+  margin-bottom: 1rem;
+}
+.right_side_course .course-list{
+  padding: 0 2rem 0.2rem 1.7rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.right_side_course .course-list li:hover{
+  background: rgb(236, 231, 231);
+}
+/* .........course section ended..... */
+/* feed part' css start from here */
+.right_side_feed {
+  background: #fff;
+  border-radius: 0.8rem;
+  height:60vh;
+  margin-top: 2rem ;
+} 
+/* to display flex to set all content */
+.right_side_feed .feed{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}
+/* here we used float in img to float left from text */
+.right_side_feed img{
+  float :left;
+  padding-left:0.3rem;
+}
+.right_side_feed .myntra  ,
+
+.right_side_feed .unilever   ,
+.right_side_feed .linkedin{
+  padding-top: 0.5rem;
+    /* padding: 0 2rem 0.2rem 1.7rem; */
+    cursor: pointer;
+    transition: 0.2s all ease;
+  }
+  .right_side_news .news-list li:hover{
+    background: rgb(236, 231, 231);
+  }
+/* here we used display inline block to set margin with inline property */
+.right_side_feed .myntra h4 ,
+
+.right_side_feed .unilever h4  ,
+.right_side_feed .linkedin h4{ 
+  display : inline-block;
+  padding-left: 1rem;
+
+}
+.right_side_feed .myntra p  ,
+.right_side_feed .unilever p , 
+.right_side_feed .linkedin p { 
+  padding-left: 3rem;
+}
+/* here we used css to give style to (follow)submit of input */
+.right_side_feed input{
+  color: rgb(93, 93, 230);
+  background-color: #f6f2f2;
+  padding: 0.5rem 3.5rem 0.5rem 2.5rem;
+  border-radius: 1.8rem;
+  margin: 0.5rem 1.5rem 0rem 2.5rem;
+  
+}
+
+/* feed related css ended.................  */
+/* .............................css end........................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
